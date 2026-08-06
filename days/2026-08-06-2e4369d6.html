@@ -1,0 +1,114 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><title>热榜速览 · 2026-08-06</title><style>@import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=ZCOOL+XiaoWei&family=Noto+Sans+SC:wght@400;500;700&display=swap');
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html, body {
+  background: linear-gradient(160deg, #fff1e6 0%, #ffe6ef 55%, #fff7e0 100%);
+  font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont,
+               "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+}
+body { color: #3a2f2a; line-height: 1.5; }
+.phone {
+  max-width: 460px; margin: 0 auto; background: #fffaf3; min-height: 100vh;
+  box-shadow: 0 0 50px rgba(255,140,90,0.18);
+}
+/* —— 封面图（暖色 hero，占满首屏）—— */
+.cover {
+  position: relative; overflow: hidden;
+  background: linear-gradient(135deg, #ff8a5b 0%, #ff5e8a 48%, #ffb347 100%);
+  color: #fff; text-align: center;
+  min-height: 100vh; min-height: 100dvh;
+  display: flex; flex-direction: column;
+}
+.cover .cover-inner {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  padding: 86px 24px 30px;
+  position: relative; z-index: 1;
+}
+.cover::after {
+  content: ""; position: absolute; right: -40px; top: -40px;
+  width: 150px; height: 150px; border-radius: 50%;
+  background: rgba(255,255,255,0.16);
+}
+.cover::before {
+  content: ""; position: absolute; left: -30px; bottom: -50px;
+  width: 120px; height: 120px; border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+}
+.cover .deco { font-size: 20px; letter-spacing: 6px; opacity: 0.9; position: relative; z-index: 1; }
+.cover .ctitle {
+  font-family: 'ZCOOL KuaiLe';
+  font-size: 36px; font-weight: 400; margin-top: 10px; letter-spacing: 2px;
+  text-shadow: 0 3px 10px rgba(180,40,80,0.35); position: relative; z-index: 1;
+}
+.cover .cslogan {
+  margin-top: 16px; display: flex; flex-direction: column; align-items: center;
+  gap: 8px; position: relative; z-index: 1;
+}
+.cover .cslogan .s1 {
+  font-family: 'ZCOOL KuaiLe';
+  font-size: 20px; font-weight: 400; letter-spacing: 3px;
+  text-shadow: 0 2px 8px rgba(180,40,80,0.3);
+}
+.cover .cslogan .s2 {
+  font-size: 15px; letter-spacing: 1px; opacity: 0.96;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+.cover .cdate {
+  display: inline-block; margin-top: 14px; font-size: 13px;
+  background: rgba(255,255,255,0.22); padding: 6px 16px; border-radius: 20px;
+  backdrop-filter: blur(4px); position: relative; z-index: 1;
+}
+.cover .ctag {
+  display: inline-block; margin-top: 10px; font-size: 13px;
+  background: rgba(255,255,255,0.22); padding: 6px 16px; border-radius: 20px;
+  position: relative; z-index: 1;
+}
+.appbar {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 5;
+  background: transparent;
+  color: #fff; padding: 18px 20px 16px;
+  text-align: left;
+}
+.appbar .title { font-size: 22px; letter-spacing: 1px; }
+.appbar .sub { margin-top: 4px; font-size: 13px; opacity: 0.95; font-family: 'Noto Sans SC', sans-serif; }
+.wrap { padding: 14px 12px 30px; }
+.card {
+  background: #fff7ef; border-radius: 18px; margin-bottom: 14px; overflow: hidden;
+  box-shadow: 0 4px 16px rgba(255,140,90,0.12);
+}
+.card-head {
+  display: flex; align-items: center; padding: 14px 16px;
+  border-left: 5px solid var(--c);
+  background: linear-gradient(90deg, color-mix(in srgb, var(--c) 10%, #fff), #fff 70%);
+}
+.card-head .ic { width: 32px; height: 32px; border-radius: 50%; margin-right: 10px; object-fit: contain; background: #fff; padding: 4px; border: 2px solid #fff; box-shadow: 0 1px 5px rgba(0,0,0,0.14); }
+.card-head .nm { font-size: 18px; color: #2a2320; font-family: 'ZCOOL KuaiLe'; }
+.card-head .tag {
+  margin-left: auto; font-size: 12px; font-weight: 700; color: var(--c);
+  background: color-mix(in srgb, var(--c) 14%, #fff); padding: 3px 10px; border-radius: 12px;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+.row {
+  display: flex; align-items: flex-start; padding: 13px 16px;
+  border-top: 1px solid #f6e7d8;
+}
+.row:nth-child(even) { background: #fff3e8; }
+.row .rank {
+  flex: 0 0 26px; height: 26px; border-radius: 50%; margin-right: 12px;
+  font-size: 14px; display: flex; align-items: center; justify-content: center;
+  background: #ffe7d6; color: #d9722f;
+}
+.row.top1 .rank { background: #ff5e8a; color: #fff; }
+.row.top2 .rank { background: #ff944d; color: #fff; }
+.row.top3 .rank { background: #ffc24d; color: #fff; }
+.row .tt {
+  flex: 1; font-size: 17px; color: #34291f; font-family: 'ZCOOL XiaoWei';
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.row .hot { margin-left: 10px; font-size: 12px; color: #d9b89f; white-space: nowrap; flex: 0 0 auto; font-family: 'Noto Sans SC', sans-serif; }
+.empty { padding: 22px 16px; color: #c9a98f; font-size: 14px; text-align: center; }
+.foot {
+  text-align: center; color: #c79c83; font-size: 12px; padding: 10px 20px 26px; line-height: 1.7;
+  font-family: 'Noto Sans SC', sans-serif;
+}
+.foot b { color: #b07a55; }</style></head><body><div class="phone"><div class="cover"><div class="appbar"><div class="title">热榜速览</div><div class="sub">2026年8月6日 星期四 · 全网热点一屏看全</div></div><div class="cover-inner"><div class="deco">🌐 ✨ 🔥</div><div class="ctitle">今日热点速览</div><div class="cslogan"><span class="s1">打破信息茧房</span><span class="s2">三分钟，世界发生了啥</span></div><div class="cdate">2026年8月6日 星期四</div><div class="ctag">一屏看全 10 大平台</div></div></div><div class="wrap"><section class="card" style="--c:#fe2c55"><div class="card-head"><img class="ic" src="../icons/douyin.png" alt="抖音"><span class="nm">抖音</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">现货黄金突破4300美元关口</div></div><div class="row top2"><div class="rank">2</div><div class="tt">掉入奶油风治愈世界</div></div><div class="row top3"><div class="rank">3</div><div class="tt">中国优质服务加快走向全球</div></div><div class="row"><div class="rank">4</div><div class="tt">挑战100个小时举办一场婚礼</div></div><div class="row"><div class="rank">5</div><div class="tt">难忘童年经典场景</div></div><div class="row"><div class="rank">6</div><div class="tt">DeepSeek拟上调API服务定价</div></div><div class="row"><div class="rank">7</div><div class="tt">台风“白海豚”逼近华东</div></div><div class="row"><div class="rank">8</div><div class="tt">辽宁今日高温42℃</div></div><div class="row"><div class="rank">9</div><div class="tt">影之刃零8月12日开启预购</div></div><div class="row"><div class="rank">10</div><div class="tt">台风白海豚会影响到哪里</div></div></section><section class="card" style="--c:#e6162d"><div class="card-head"><img class="ic" src="../icons/weibo.png" alt="微博"><span class="nm">微博</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">女子用漏洞0元买了3千台电器</div></div><div class="row top2"><div class="rank">2</div><div class="tt">工作其实是很养人的</div></div><div class="row top3"><div class="rank">3</div><div class="tt">6图看我国海洋经济稳步增长</div></div><div class="row"><div class="rank">4</div><div class="tt">上海 床虱</div></div><div class="row"><div class="rank">5</div><div class="tt">双休</div></div><div class="row"><div class="rank">6</div><div class="tt">大白兔奶糖的包装纸火了</div></div><div class="row"><div class="rank">7</div><div class="tt">陈伟霆看见开始上水果天塌了</div></div><div class="row"><div class="rank">8</div><div class="tt">刺棠 郭虎</div></div><div class="row"><div class="rank">9</div><div class="tt">DeepSeek推理到一半说自己饿了</div></div><div class="row"><div class="rank">10</div><div class="tt">阿根廷世界杯决赛前3人受伤</div></div></section><section class="card" style="--c:#00aeec"><div class="card-head"><img class="ic" src="../icons/bilibili.png" alt="哔哩哔哩"><span class="nm">哔哩哔哩</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">台风鲸鱼和灿鸿先后生成</div></div><div class="row top2"><div class="rank">2</div><div class="tt">TES战胜EDG</div></div><div class="row top3"><div class="rank">3</div><div class="tt">韩国人炒股有多疯狂</div></div><div class="row"><div class="rank">4</div><div class="tt">GEN战胜HLE终结连败</div></div><div class="row"><div class="rank">5</div><div class="tt">美国为何要制裁洽洽瓜子</div></div><div class="row"><div class="rank">6</div><div class="tt">神二十一乘组回家后首次亮相</div></div><div class="row"><div class="rank">7</div><div class="tt">JDG战胜LGD</div></div><div class="row"><div class="rank">8</div><div class="tt">欢迎来到研究生的世界</div></div><div class="row"><div class="rank">9</div><div class="tt">中国人能飞初音未来版</div></div><div class="row"><div class="rank">10</div><div class="tt">电脑市场2026现状</div></div></section><section class="card" style="--c:#00be06"><div class="card-head"><img class="ic" src="../icons/iqiyi.png" alt="爱奇艺"><span class="nm">爱奇艺</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">天才，女友</div></div><div class="row top2"><div class="rank">2</div><div class="tt">这一秒过火</div></div><div class="row top3"><div class="rank">3</div><div class="tt">喜欢你我也是第6季</div></div><div class="row"><div class="rank">4</div><div class="tt">兵自风中来</div></div><div class="row"><div class="rank">5</div><div class="tt">雀骨</div></div><div class="row"><div class="rank">6</div><div class="tt">凛冬下的罪恶</div></div><div class="row"><div class="rank">7</div><div class="tt">喜剧之王单口季第3季</div></div><div class="row"><div class="rank">8</div><div class="tt">说唱巅峰对决2026</div></div><div class="row"><div class="rank">9</div><div class="tt">种地吧第4季</div></div><div class="row"><div class="rank">10</div><div class="tt">斩毒行动</div></div></section><section class="card" style="--c:#f43f5e"><div class="card-head"><img class="ic" src="../icons/sspai.png" alt="少数派"><span class="nm">少数派</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">「弯道超车」赛车入门指北：进站不只为换胎，策略里的那本时间账</div></div><div class="row top2"><div class="rank">2</div><div class="tt">本月玩什么｜节奏天国、斯普拉遁 涂击队、刺客信条：黑旗 记忆重置</div></div><div class="row top3"><div class="rank">3</div><div class="tt">本周看什么 | 最近值得一看的 10 部作品</div></div><div class="row"><div class="rank">4</div><div class="tt">App+1 | 免费、多功能的远程控制新选择：网易 UU 远程</div></div><div class="row"><div class="rank">5</div><div class="tt">少数派会员年度更新：把共同的热爱随身携带</div></div><div class="row"><div class="rank">6</div><div class="tt">离 AI 最近的老牌写作工具不聊 AI：iA Writer 8.0 大版本更新</div></div><div class="row"><div class="rank">7</div><div class="tt">App+1 | 诗经山河图：我用 AI 做了一张《诗经》地图</div></div><div class="row"><div class="rank">8</div><div class="tt">简单有效的 E-cise，如何让我摆脱体态不良的「三件套」？</div></div><div class="row"><div class="rank">9</div><div class="tt">社区速递 151 | 派友的六月好物盘点、携程被重罚热议和 tomtoc 城市穿行背包</div></div><div class="row"><div class="rank">10</div><div class="tt">从《奥德赛》观影聊聊 IMAX 影院的分类</div></div></section><section class="card" style="--c:#e64142"><div class="card-head"><img class="ic" src="../icons/toutiao.png" alt="今日头条"><span class="nm">今日头条</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">母子俩在“天津之眼”附近落水溺亡</div></div><div class="row top2"><div class="rank">2</div><div class="tt">伊朗总统：最高领袖决策过程遭人利用</div></div><div class="row top3"><div class="rank">3</div><div class="tt">知识产权强国建设驶入“快车道”</div></div><div class="row"><div class="rank">4</div><div class="tt">80后女柜员逆袭成4200亿银行副行长</div></div><div class="row"><div class="rank">5</div><div class="tt">邵永灵：俄军终于打了场漂亮的反击</div></div><div class="row"><div class="rank">6</div><div class="tt">儿子举报父亲伪造证件为私生子落户</div></div><div class="row"><div class="rank">7</div><div class="tt">空调发明出来竟然不是为了给人降温</div></div><div class="row"><div class="rank">8</div><div class="tt">如何看待长鑫拒绝苹果压价</div></div><div class="row"><div class="rank">9</div><div class="tt">“梅姨”真名曝光 对话受害者家属</div></div><div class="row"><div class="rank">10</div><div class="tt">胚胎案妻子称受校长出轨教师案启发</div></div></section><section class="card" style="--c:#d8362a"><div class="card-head"><img class="ic" src="../icons/ifeng.png" alt="凤凰网"><span class="nm">凤凰网</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">伊朗总统：最高领袖决策过程遭人利用</div></div><div class="row top2"><div class="rank">2</div><div class="tt">一场被遗忘的战争，彻底杀红了眼</div></div><div class="row top3"><div class="rank">3</div><div class="tt">特朗普所乘飞机遭遇安全事件，美方启动调查</div></div><div class="row"><div class="rank">4</div><div class="tt">涉台问题，特朗普的教训还没吃够</div></div><div class="row"><div class="rank">5</div><div class="tt">中方接连出手反制</div></div><div class="row"><div class="rank">6</div><div class="tt">韩国部长：我最担心中国了</div></div><div class="row"><div class="rank">7</div><div class="tt">“中方正在采购，令人鼓舞！”</div></div><div class="row"><div class="rank">8</div><div class="tt">一个中国新税号引发美国大焦虑</div></div><div class="row"><div class="rank">9</div><div class="tt">特朗普污蔑：中国背后捣鬼</div></div><div class="row"><div class="rank">10</div><div class="tt">美国制裁中国的帮凶，挨了一记重拳</div></div></section><section class="card" style="--c:#d8262c"><div class="card-head"><img class="ic" src="../icons/thepaper.png" alt="澎湃新闻"><span class="nm">澎湃新闻</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">马上评丨法院认为“老登”属年龄贬损，这个词错在哪里？</div></div><div class="row top2"><div class="rank">2</div><div class="tt">广东雷州通报“特教老师招聘存在违规”：启动问责程序，副校长被停职</div></div><div class="row top3"><div class="rank">3</div><div class="tt">媒体：人贩子“梅姨”真实姓名首曝光</div></div><div class="row"><div class="rank">4</div><div class="tt">“制茶大师”“烹饪大师”称号接连作废，要解决的是什么问题</div></div><div class="row"><div class="rank">5</div><div class="tt">澎湃回声｜多平台回应“假睫毛胶水检出多种致癌、致敏物”：正排查处置</div></div><div class="row"><div class="rank">6</div><div class="tt">联合国教科文组织确认北京为2029年“世界建筑之都”</div></div><div class="row"><div class="rank">7</div><div class="tt">暮年常沙娜：记忆消逝处，不褪色的敦煌人生</div></div><div class="row"><div class="rank">8</div><div class="tt">犬伤门诊迎接诊高峰：多数患者被家养宠物咬伤，还有人因接触蝙蝠就诊</div></div><div class="row"><div class="rank">9</div><div class="tt">韩国“超高龄社会”切面：40℃国家灾难状态下，2400名首尔老人还在巷子里收废纸</div></div><div class="row"><div class="rank">10</div><div class="tt">存储芯片成本压力开始释放！余承东称所有手机都要大规模涨价，否则就是亏损销售</div></div></section><section class="card" style="--c:#c0392b"><div class="card-head"><img class="ic" src="../icons/cls.png" alt="财联社"><span class="nm">财联社</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">财联社8月6日电，宏碁上半年营收1,577.3亿元台币，净利润28.7亿元台币。</div></div><div class="row top2"><div class="rank">2</div><div class="tt">受台风影响，浙江舟山水上客运航线已停航21条，宁波关停涉海景区</div></div><div class="row top3"><div class="rank">3</div><div class="tt">财联社8月6日电，在IPO后股票锁定期到期前，SpaceX美股盘前上涨2.9%。</div></div><div class="row"><div class="rank">4</div><div class="tt">财联社8月6日电，在岸人民币兑美元收盘报6.7515，较上一交易日下降12点。</div></div><div class="row"><div class="rank">5</div><div class="tt">财联社8月6日电，Fluence能源股价盘前下跌17%，因下调年度营收预期。</div></div><div class="row"><div class="rank">6</div><div class="tt">财联社8月6日电，德国汽车管理局数据显示，德国七月份汽车注册量增长1.2%，达到268,068辆。</div></div><div class="row"><div class="rank">7</div><div class="tt">山东发布高温橙色预警 局部可达40℃以上</div></div><div class="row"><div class="rank">8</div><div class="tt">以色列称成功测试升级版“箭”式反导系统</div></div><div class="row"><div class="rank">9</div><div class="tt">百隆东方：上半年净利润同比增长43.45% 拟每10股派1.8元</div></div><div class="row"><div class="rank">10</div><div class="tt">四川资阳市委原副书记、市政府原市长王善平一审获刑十一年</div></div></section><section class="card" style="--c:#b8932f"><div class="card-head"><img class="ic" src="../icons/wallstreetcn.png" alt="华尔街见闻"><span class="nm">华尔街见闻</span><span class="tag">TOP 10</span></div><div class="row top1"><div class="rank">1</div><div class="tt">人民银行上海总部召开上海市金融形势分析会</div></div><div class="row top2"><div class="rank">2</div><div class="tt">绿联科技：发行境外上市股份（H 股）获得中国证监会备案。</div></div><div class="row top3"><div class="rank">3</div><div class="tt">巴基斯坦称希望推动美伊恢复技术层面谈判</div></div><div class="row"><div class="rank">4</div><div class="tt">扬帆新材：拟3000万元-6000万元回购公司股份。</div></div><div class="row"><div class="rank">5</div><div class="tt">宏碁：上半年营收1,577.3亿元台币，净利润28.7亿元台币。</div></div><div class="row"><div class="rank">6</div><div class="tt">乌克兰前驻美大使涉嫌非法敛财遭调查</div></div><div class="row"><div class="rank">7</div><div class="tt">软银：正等待ABB机器人业务交易的审批，预计将在本财年内完成交割。</div></div><div class="row"><div class="rank">8</div><div class="tt">在IPO后股票锁定期到期前，SpaceX美股盘前上涨2.9%。</div></div><div class="row"><div class="rank">9</div><div class="tt">在岸人民币兑美元北京时间16:30官方收报6.7515，较上一交易日官方收盘价跌12点，较上日夜盘收盘跌20点。</div></div><div class="row"><div class="rank">10</div><div class="tt">英国7月建筑业PMI 44.7，预期 40，前值 38.4。</div></div></section></div></div></body></html>
